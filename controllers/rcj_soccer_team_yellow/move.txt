@@ -1,0 +1,18 @@
+def move(self, x, y):
+        target = {'x': x, 'y': y}
+        angle, robot_angle = self.get_angles(target, self.robot_pos)
+        direction = utils.get_direction(angle)
+        
+        if direction == 0:
+            left_speed = -10
+            right_speed = -10
+        else:
+            left_speed = direction * 10
+            right_speed = direction * -10
+	
+        if(left_speed > 10): left_speed = 10
+        if(left_speed <-10): left_speed =-10
+        if(right_speed > 10): right_speed = 10
+        if(right_speed <-10): right_speed =-10
+        self.left_motor.setVelocity(left_speed)
+        self.right_motor.setVelocity(right_speed)

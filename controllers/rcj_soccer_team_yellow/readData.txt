@@ -1,0 +1,12 @@
+def readSensor(self):
+        ############################# Data read
+        self.data = self.get_new_data()
+        self.robot_pos = self.data[self.name]
+
+        self.x_ball = self.data['ball']['x']
+        self.y_ball = self.data['ball']['y']
+        self.x_robot = self.data[self.name]['x']
+        self.y_robot = self.data[self.name]['y']
+        self.orientation = (self.data[self.name]['orientation'] * 180)/math.pi
+        self.ball_distance = math.sqrt((self.x_ball - self.x_robot) ** 2 + (self.y_ball - self.y_robot) ** 2)
+        

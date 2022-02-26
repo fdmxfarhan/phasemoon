@@ -1,0 +1,9 @@
+def motor(self, ML, MR):
+	if(ML > 10): ML = 10
+        if(ML <-10): ML =-10
+        if(MR > 10): MR = 10
+        if(MR <-10): MR =-10
+        
+        self.left_motor.setVelocity(ML)
+        self.right_motor.setVelocity(MR)
+    

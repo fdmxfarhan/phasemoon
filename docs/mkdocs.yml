@@ -1,0 +1,16 @@
+site_name: RCJ Soccer Sim
+theme:
+  name: material
+  palette:
+    primary: teal
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Simulation Challenge 2021: index.md
+  - Registration & Qualification: qualification.md
+  - Rules: rules.md
+  - Getting Started: getting_started.md
+  - How to program your robot: how_to_robot.md
+  - Code submission: code_submission.md
